@@ -1,8 +1,9 @@
-/* MODEL | SPK-BASIC | STYLE - 2017-08-17 8:09am */
+/* MODEL | SPK-PACKAGES | STYLE - 2017-08-21 8:03am */
 
 // requires CodeKit
 // requires Framework "base-theme"
 // requires Framework "setup"
+// based on model "spkbasic"
 
 // THEME
 @import 	"wp/themeinfo";
@@ -16,7 +17,7 @@
 // SUZY
 @import 	"susy";
 
-// -------------------------------------------------------------------- VARIABLES | 2017-08-17
+// -------------------------------------------------------------------- VARIABLES | 2017-06-06
 @import 	"variables/230_base/susy";
 			@import 	"variables/230_base/color";
 @import 	"variables/230_base/space";
@@ -190,7 +191,7 @@
 			//@import 	"layout/250_setupbasic/structure-override";
 						@import 	"layout/250_spkbasic/header";
 			//@import 	"layout/250_setupbasic/header-override";
-						@import 	"layout/250_spkbasic/inner";
+			@import 	"layout/250_setupbasic/inner";
 			//@import 	"layout/250_setupbasic/inner-override";
 						@import 	"layout/250_spkbasic/footer";
 			//@import 	"layout/250_setupbasic/footer-override";
