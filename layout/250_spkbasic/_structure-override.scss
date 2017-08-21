@@ -1,0 +1,26 @@
+/* SETUP | LAYOUT | 250_SETUPBASIC | STRUCTURE-OVERRIDE - 2018-08-07 */
+
+// -------------------------------------
+// EXTEND
+
+	%sitecontainer_override {}
+
+	%sitecontainer_fullwidth {
+		max-width: none;
+		width: 100%;
+	}
+
+
+// -------------------------------------
+// SELECTORS
+
+	.override .site-container {
+		@extend %sitecontainer_override !optional;
+	}
+
+	body.fullwidth .site-container {
+		@extend %sitecontainer_fullwidth !optional;
+	}
+	body.fullwidth-container .site-container {
+		@extend %sitecontainer_fullwidth !optional;
+	}

@@ -1,0 +1,64 @@
+/* BASE_230 | LAYOUT | 230_MODEL-BASICSETUP | MENUNAV - 2017-04-20 */
+// BASE_230 | MENU | 230_BASE
+
+// -------------------------------------
+// EXTEND
+
+	// NAV-BOTH
+
+	%navboth_layout {}
+	%navbothwrap_layout {}
+	%navbothwraponly_layout {}
+
+	// NAV-PRIMARY
+
+	%navprimary_layout {}
+	%navprimarywrap_layout {}
+	%navprimarywraponly {}
+
+	// NAV-SECONDARY
+
+	%navsecondary_layout {}
+	%navsecondarywrap_layout {}
+	%navsecondarywraponly {}
+
+// -------------------------------------
+// SELECTORS
+
+	// NAV-PRIMARY
+
+	.nav-primary {
+		@extend %navprimary !optional;
+		@extend %navboth_layout !optional;
+		@extend %navprimary_layout !optional;
+
+		.wrap {
+			@extend %navprimarywrap !optional;
+			@extend %navbothwrap_layout !optional;
+			@extend %navprimarywrap_layout !optional;
+		}
+	}
+	.nav-primary > .wrap {
+		@extend %navprimarywraponly !optional;
+		@extend %navbothwraponly_layout !optional;
+		@extend %navprimarywraponly_layout !optional;
+	}
+
+	// NAV-SECONDARY
+
+	.nav-secondary {
+		@extend %navsecondary !optional;
+		@extend %navboth_layout !optional;
+		@extend %navsecondary_layout !optional;
+
+		.wrap {
+			@extend %navsecondarywrap !optional;
+			@extend %navbothwrap_layout !optional;
+			@extend %navsecondarywrap_layout !optional;
+		}
+	}
+	.nav-secondary > .wrap {
+		@extend %navsecondarywraponly !optional;
+		@extend %navbothwraponly_layout !optional;
+		@extend %navsecondarywraponly_layout !optional;
+	}

@@ -1,0 +1,61 @@
+/* SETUP | LAYOUT | 250_SETUPBASIC | HEADER-OVERRIDE - 2018-08-07 */
+
+// -------------------------------------
+// EXTEND
+
+	// SITE-HEADER
+
+	%header_fullwidth {
+		max-width: none;
+		width: 100%;
+	}
+
+	%siteheader_override {}
+	%siteheaderwrap_override {}
+	%siteheaderwraponly_override {}
+
+	%siteheader_fullwidth {}
+	%siteheaderwrap_fullwidth {}
+	%siteheaderwraponly_fullwidth {}
+
+// -------------------------------------
+// SELECTORS
+
+	// SITE-HEADER
+
+	.override .site-header {
+		@extend %siteheader_override !optional;
+		
+		.wrap {
+			@extend %siteheaderwrap_override !optional;
+		}
+	}
+	.override .site-header > .wrap {
+		@extend %siteheaderwraponly_override !optional;
+	}
+
+	body.fullwidth .site-header {
+		@extend %header_fullwidth !optional;
+		@extend %siteheader_fullwidth !optional;
+		
+		.wrap {
+			@extend %siteheaderwrap_fullwidth !optional;
+		}
+	}
+	body.fullwidth .site-header > .wrap {
+		@extend %header_fullwidth !optional;
+		@extend %siteheaderwraponly_fullwidth !optional;
+	}
+
+	body.fullwidth-header .site-header {
+		@extend %header_fullwidth !optional;
+		@extend %siteheader_fullwidth !optional;
+		
+		.wrap {
+			@extend %siteheaderwrap_fullwidth !optional;
+		}
+	}
+	body.fullwidth-header .site-header > .wrap {
+		@extend %header_fullwidth !optional;
+		@extend %siteheaderwraponly_fullwidth !optional;
+	}

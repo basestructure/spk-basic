@@ -1,0 +1,49 @@
+/* BASE_230 | LAYOUT | 230_MODEL-BASICSETUP | WIDGET - 2017-02-13 */
+// BASE_230 | WIDGET | 230_BASE
+
+// -------------------------------------
+// EXTEND
+
+	// WIDGET
+
+	%widget_layout {
+		margin-bottom: 2rem;
+	}
+
+	// WIDGET-WRAP
+
+	%widget-wrap_layout {}
+
+	// WIDGET-TITLE
+
+	%widget-title_layout {
+		font-family: $fontfamily-widgettitle;
+		font-size: #{$fontsize-titlewidget}rem;
+		letter-spacing: 0.125rem;
+		margin-bottom: 1rem;
+	}
+
+
+// -------------------------------------
+// SELECTORS
+
+	// WIDGET
+
+	.widget {
+		@extend %widget !optional;
+		@extend %widget_layout !optional;
+	}
+
+	// WIDGET-WRAP
+
+	.widget-wrap {
+		@extend %widget-wrap !optional;
+		@extend %widget-wrap_layout !optional;
+	}
+
+	// WIDGET-TITLE
+
+	.widget-title {
+		@extend %widget-title !optional;
+		@extend %widget-title_layout !optional;
+	}

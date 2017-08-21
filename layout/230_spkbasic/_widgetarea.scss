@@ -1,0 +1,20 @@
+/* BASE_230 | LAYOUT | 230_MODEL-BASICSETUP | WIDGETAREA - 2017-02-13 */
+// BASE_230 | WIDGET | 230_BASE
+
+// -------------------------------------
+// EXTEND
+
+	// WIDGET-AREA
+
+	%widget-area_layout {}
+
+
+// -------------------------------------
+// SELECTORS
+
+	// WIDGET-AREA
+
+	.widget-area {
+		@extend %widgetarea !optional;
+		@extend %widgetarea_layout !optional;
+	}

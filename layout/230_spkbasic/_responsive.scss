@@ -1,0 +1,17 @@
+/* BASE_230 | LAYOUT | 230_MODEL-BASICSETUP | RESPONSIVE - 2017-05-16 */
+
+// -------------------------------------
+// EXTEND
+
+
+// -------------------------------------
+// SELECTORS
+
+	// WIDGET-AREA
+
+	.alignleft,
+	.alignright {
+		@include responsive-range(meddown) {
+			float: none;
+		}
+	}

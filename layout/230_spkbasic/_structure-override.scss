@@ -1,0 +1,27 @@
+/* BASE_230 | LAYOUT | 230_MODEL-BASICSETUP | STRUCTURE-OVERRIDE - 2017-04-21 */
+// BASE_230 | STRUCTURE | 230_BASE
+
+// -------------------------------------
+// EXTEND
+
+	%sitecontainer_override {}
+
+	%sitecontainer_fullwidth {
+		max-width: none;
+		width: 100%;
+	}
+
+
+// -------------------------------------
+// SELECTORS
+
+	.override .site-container {
+		@extend %sitecontainer_override !optional;
+	}
+
+	body.fullwidth .site-container {
+		@extend %sitecontainer_fullwidth !optional;
+	}
+	body.fullwidth-container .site-container {
+		@extend %sitecontainer_fullwidth !optional;
+	}

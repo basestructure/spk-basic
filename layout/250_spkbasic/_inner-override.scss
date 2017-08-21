@@ -1,0 +1,84 @@
+/* SETUP | LAYOUT | 250_SETUPBASIC | INNER-OVERRIDE - 2018-08-07 */
+
+// -------------------------------------
+// EXTEND
+
+	// SITE-INNER
+
+	%siteinner_override {}
+
+	// CONTENT-SIDEBAR-WRAP
+
+	%csw_override {}
+
+	// CONTENT
+
+	%content_override {}
+
+	// SIDEBAR-PRIMARY
+
+	%sidebarprimary_override {}
+
+	// SIDEBAR-SECONDARY
+
+	%sidebarsecondary_override {}
+
+	// FULLWIDTH
+
+	%fullwidth {
+		max-width: none;
+		width: 100%;		
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	// SITE-INNER
+
+	.override .site-inner {
+		@extend %siteinner_override !optional;
+	}
+
+	// CONTENT-SIDEBAR-WRAP
+
+	.override .content-sidebar-wrap {
+		@extend %csw_override !optional;
+	}
+
+	// CONTENT
+
+	.override .content {
+		@extend %content_override !optional;
+	}
+
+	// SIDEBAR-PRIMARY
+
+	.override .sidebar-primary {
+		@extend %sidebarprimary_override !optional;
+	}
+
+	// SIDEBAR-SECONDARY
+
+	.override .sidebar-secondary {
+		@extend %sidebarsecondary_override !optional;
+	}
+
+	// FULLWIDTH
+	body.fullwidth .site-inner {
+		@extend %fullwidth !optional
+	}
+	body.fullwidth-siteinner .site-inner {
+		@extend %fullwidth !optional
+	}
+	body.fullwidth-csw .content-sidebar-wrap {
+		@extend %fullwidth !optional
+	}
+	body.fullwidth-content .content {
+		@extend %fullwidth !optional
+	}
+	body.fullwidth-sidebarprimary .sidebar-primary {
+		@extend %fullwidth !optional
+	}
+	body.fullwidth-sidebarsecondary .sidebar-secondary {
+		@extend %fullwidth !optional
+	}

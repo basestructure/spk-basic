@@ -1,0 +1,33 @@
+/* SETUP | LAYOUT | 250_SETUPBASIC | BODY - 2018-08-07 */
+
+// -------------------------------------
+// EXTEND
+
+	// HTML
+
+	%html_layout {}
+
+	// BODY
+
+	%body_layout {
+		font-family: $fontfamily-body;
+		color: $color-body;
+		background-color: $bgcolor-body;
+		line-height: $lineheight-body;
+	}
+
+
+// -------------------------------------
+// SELECTORS
+
+	// HTML
+
+	html {
+		@extend %html_layout !optional;
+	}
+
+	// BODY
+
+	body {
+		@extend %body_layout !optional;
+	}

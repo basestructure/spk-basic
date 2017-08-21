@@ -1,0 +1,114 @@
+/* BASE_230 | LAYOUT | 230_MODEL-BASICSETUP | HEADER - 2017-02-12 */
+// BASE_230 | HEADER | 230_BASE
+
+// -------------------------------------
+// EXTEND
+
+	// SITE-HEADER
+
+	%siteheader_layout {
+		@extend %clearfix !optional;
+	}
+	%siteheaderwrap_layout {}
+	%siteheaderwraponly_layout {
+		border-bottom: 1px solid #eee;
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+		@extend %clearfix !optional;
+	}
+
+	// HEADER-WIDGET-AREA
+
+	%headerwidgetarea_layout {
+		@extend %clearfix !optional;
+	}
+
+	// TITLE-AREA
+
+	%titlearea_layout {
+		@extend %clearfix !optional;
+	}
+
+	// SITE-TITLE
+
+	%sitetitle_layout {
+		font-family: $fontfamily-sitetitle;				// fontfamily
+		font-size: #{$fontsize-sitetitle}rem;			// fontsize
+		font-weight: $fontweight-thick;
+		line-height: 1;
+		margin-bottom: 0;
+		@extend %clearfix !optional;
+	}
+	%sitetitle-a_layout {
+		@extend %clearfix !optional;
+	}
+	%sitetitle-hvr_layout {}
+
+	// SITE-DESCRIPTION
+
+	%sitedescription_layout {
+		font-family: $fontfamily-sitedescription;		// fontfamily
+		font-size: #{$fontsize-sitedescription}rem;		// fontsize
+		font-weight: $fontweight-thin;
+		line-height: 1;
+		margin-top: 0.5rem;
+		margin-bottom: 0;
+		@extend %clearfix !optional;
+	}
+
+
+// -------------------------------------
+// SELECTORS
+
+	// SITE-HEADER
+
+	.site-header {
+		@extend %siteheader !optional;
+		@extend %siteheader_layout !optional;
+		
+		.wrap {
+			@extend %siteheaderwrap !optional;
+			@extend %siteheaderwrap_layout !optional;
+		}
+	}
+	.site-header > .wrap {
+		@extend %siteheaderwraponly !optional;
+		@extend %siteheaderwraponly_layout !optional;
+	}
+
+	// HEADER-WIDGET-AREA
+
+	.header-widget-area {
+		@extend %headerwidgetarea !optional;
+		@extend %headerwidgetarea_layout !optional;
+	}
+
+	// TITLE-AREA
+
+	.title-area {
+		@extend %titlearea !optional;
+		@extend %titlearea_layout !optional;
+	}
+
+	// SITE-TITLE
+
+	.site-title {
+		@extend %sitetitle !optional;
+		@extend %sitetitle_layout !optional;
+
+		a {
+			@extend %sitetitle-a !optional;
+			@extend %sitetitle-a_layout !optional;
+		}
+		a:hover {
+			@extend %sitetitle-hvr !optional;
+			@extend %sitetitle-hvr_layout !optional;
+		}
+	}
+
+	// SITE-DESCRIPTION
+
+	.site-description {
+		@extend %sitedescription !optional;
+		@extend %sitedescription_layout !optional;
+	}

@@ -1,0 +1,132 @@
+/* BASE_230 | LAYOUT | 230_MODEL-BASICSETUP | MENUDROPDOWN - 2017-04-20 */
+// BASE_230 | MENU | 230_BASE
+
+// -------------------------------------
+// EXTEND
+
+	// DROPDOWN MENU-PRIMARY & MENU-SECONDARY
+	// .menu-primary .menu-item.menu-item-has-children
+	// .menu-secondary .menu-item.menu-item-has-children
+	%dropdown-menuboth-menuitemwchild_layout {
+		@include responsive-range(medup) {
+			position: relative;
+		}
+	}
+	// .menu-primary .menu-item.menu-item-has-children:hover > .sub-menu
+	// .menu-secondary .menu-item.menu-item-has-children:hover > .sub-menu
+	%dropdown-menuboth-menuitemwchild-hvr-submenu_layout {
+		@include responsive-range(medup) {
+			left: 0;
+			opacity: 1;
+		}
+	}
+	// .menu-primary .sub-menu
+	// .menu-secondary .sub-menu
+	%dropdown-menuboth-submenu_layout {
+		@include responsive-range(medup) {
+			position: absolute;
+			left: -9999px;
+			opacity: 0;
+			z-index: 99;
+			-webkit-transition: opacity .4s ease-in-out;
+			-moz-transition:    opacity .4s ease-in-out;
+			-ms-transition:     opacity .4s ease-in-out;
+			-o-transition:      opacity .4s ease-in-out;
+			transition:         opacity .4s ease-in-out;
+			margin: 0;
+			padding: 0;
+			width: 150px;
+		}
+	}
+	// determines the space of the child submenu relative to the parent submenu
+	// .menu-primary .sub-menu > .menu-item-has-children:hover > .sub-menu
+	// .menu-secondary .sub-menu > .menu-item-has-children:hover > .sub-menu
+	%dropdown-menuboth-submenu-menuitemwchildhvr-submenu_layout {
+		// aligns the submenu container to the left instead of right
+		//left: -150px;
+
+		@include responsive-range(medup) {
+			left: 150px;
+			right: 0;
+			top: 0;
+			box-sizing: border-box;
+		}
+	}
+
+	// DROPDOWN MENU-PRIMARY
+	// .menu-primary .menu-item.menu-item-has-children
+	%dropdown-menuprimary-menuitemwchild_layout {}
+	// .menu-primary .menu-item.menu-item-has-children:hover > .sub-menu
+	%dropdown-menuprimary-menuitemwchild-hvr-submenu_layout {}
+	// .menu-primary .sub-menu
+	%dropdown-menuprimary-submenu-dropdown_layout {}
+	// .menu-primary .sub-menu > .menu-item-has-children:hover > .sub-menu
+	%dropdown-menuprimary-submenu-menuitemwchildhvr-submenu_layout {}
+
+	// .menu-secondary .menu-item.menu-item-has-children
+	%dropdown-menusecondary-menuitemwchild_layout {}
+	// .menu-secondary .menu-item.menu-item-has-children:hover > .sub-menu
+	%dropdown-menusecondary-menuitemwchild-hvr-submenu_layout {}
+	// .menu-secondary .sub-menu
+	%dropdown-menusecondary-submenu-dropdown_layout {}
+	// .menu-secondary .sub-menu > .menu-item-has-children:hover > .sub-menu
+	%dropdown-menusecondary-submenu-menuitemwchildhvr-submenu_layout {}
+
+// -------------------------------------
+// SELECTORS
+
+	// DROPDOWN MENU-PRIMARY
+	.menu-primary {
+		.menu-item.menu-item-has-children {
+			@extend %dropdown-menuboth-menuitemwchild !optional;
+			@extend %dropdown-menuprimary-menuitemwchild !optional;
+			@extend %dropdown-menuboth-menuitemwchild_layout !optional;
+			@extend %dropdown-menuprimary-menuitemwchild_layout !optional;
+		}
+		.menu-item.menu-item-has-children:hover > .sub-menu {
+			@extend %dropdown-menuboth-menuitemwchild-hvr-submenu !optional;
+			@extend %dropdown-menuprimary-menuitemwchild-hvr-submenu !optional;
+			@extend %dropdown-menuboth-menuitemwchild-hvr-submenu_layout !optional;
+			@extend %dropdown-menuprimary-menuitemwchild-hvr-submenu_layout !optional;
+		}
+		.sub-menu {
+			@extend %dropdown-menuboth-submenu !optional;
+			@extend %dropdown-menuprimary-submenu !optional;
+			@extend %dropdown-menuboth-submenu_layout !optional;
+			@extend %dropdown-menuprimary-submenu_layout !optional;
+		}
+		.sub-menu > .menu-item-has-children:hover > .sub-menu {
+			@extend %dropdown-menuboth-submenu-menuitemwchildhvr-submenu !optional;
+			@extend %dropdown-menuprimary-submenu-menuitemwchildhvr-submenu !optional;
+			@extend %dropdown-menuboth-submenu-menuitemwchildhvr-submenu_layout !optional;
+			@extend %dropdown-menuprimary-submenu-menuitemwchildhvr-submenu_layout !optional;
+		}
+	}
+
+	// DROPDOWN MENU-SECONDARY
+	.menu-secondary {
+		.menu-item.menu-item-has-children {
+			@extend %dropdown-menuboth-menuitemwchild !optional;
+			@extend %dropdown-menusecondary-menuitemwchild !optional;
+			@extend %dropdown-menuboth-menuitemwchild_layout !optional;
+			@extend %dropdown-menusecondary-menuitemwchild_layout !optional;
+		}
+		.menu-item.menu-item-has-children:hover > .sub-menu {
+			@extend %dropdown-menuboth-menuitemwchild-hvr-submenu !optional;
+			@extend %dropdown-menusecondary-menuitemwchild-hvr-submenu !optional;
+			@extend %dropdown-menuboth-menuitemwchild-hvr-submenu_layout !optional;
+			@extend %dropdown-menusecondary-menuitemwchild-hvr-submenu_layout !optional;
+		}
+		.sub-menu {
+			@extend %dropdown-menuboth-submenu !optional;
+			@extend %dropdown-menusecondary-submenu !optional;
+			@extend %dropdown-menuboth-submenu_layout !optional;
+			@extend %dropdown-menusecondary-submenu_layout !optional;
+		}
+		.sub-menu > .menu-item-has-children:hover > .sub-menu {
+			@extend %dropdown-menuboth-submenu-menuitemwchildhvr-submenu !optional;
+			@extend %dropdown-menusecondary-submenu-menuitemwchildhvr-submenu !optional;
+			@extend %dropdown-menuboth-submenu-menuitemwchildhvr-submenu_layout !optional;
+			@extend %dropdown-menusecondary-submenu-menuitemwchildhvr-submenu_layout !optional;
+		}
+	}

@@ -1,0 +1,94 @@
+/* BASE_230 | LAYOUT | 230_MODEL-BASICSETUP | INNER - 2017-02-13 */
+// BASE_230 | INNER | 230_BASE
+
+// -------------------------------------
+// EXTEND
+
+	// SITE-INNER
+
+	%siteinner_layout {
+		margin-top: 5rem;
+		margin-bottom: 5rem;
+		@extend %clearfix !optional;
+
+		@include responsive-range(medbelowdown) {
+			margin-top: 2rem;
+			margin-bottom: 2rem;
+		}
+	}
+	%siteinnerwrap_layout {}
+	%siteinnerwraponly_layout {
+		@extend %clearfix !optional;
+	}
+
+	// CONTENT-SIDEBAR-WRAP
+
+	%csw_layout {
+		@extend %clearfix !optional;
+	}
+
+	// CONTENT
+
+	%content_layout {
+		@extend %clearfix !optional;
+	}
+
+	// SIDEBAR-PRIMARY
+
+	%sidebarprimary_layout {
+		@extend %clearfix !optional;
+	}
+
+	// SIDEBAR-SECONDARY
+
+	%sidebarsecondary_layout {
+		@extend %clearfix !optional;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	// SITE-INNER
+
+	.site-inner {
+		@extend %siteinner !optional;
+		@extend %siteinner_layout !optional;
+
+		.wrap {
+			@extend %siteinnerwrap !optional;
+			@extend %siteinnerwrap_layout !optional;
+		}
+	}
+	.site-inner > .wrap {
+		@extend %siteinnerwraponly !optional;
+		@extend %siteinnerwraponly_layout !optional;
+	}
+
+	// CONTENT-SIDEBAR-WRAP
+
+	.content-sidebar-wrap {
+		@extend %csw !optional;
+		@extend %csw_layout !optional;
+	}
+
+	// CONTENT
+
+	.content {
+		@extend %content !optional;
+		@extend %content_layout !optional;
+	}
+
+	// SIDEBAR-PRIMARY
+
+	.sidebar-primary {
+		@extend %sidebarprimary !optional;
+		@extend %sidebarprimary_layout !optional;
+	}
+
+	// SIDEBAR-SECONDARY
+
+	.sidebar-secondary {
+		@extend %sidebarsecondary !optional;
+		@extend %sidebarsecondary_layout !optional;
+	}
+

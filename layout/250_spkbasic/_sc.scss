@@ -1,0 +1,63 @@
+/* SETUP | LAYOUT | 250_SETUPBASIC | SC - 2018-08-07 */
+
+// -------------------------------------
+// EXTEND
+
+	%sc-csw_layout {
+		// MEDDOWN
+		@include responsive-range(meddown) {
+			padding: 1rem;
+		}
+	}
+
+	%sc-content_layout {
+
+		// BASEUP
+		@include responsive-range(baseup) {
+			float: right;
+			width: 70%;
+		}
+		// BASEDOWN
+		@include responsive-range(basedown) {
+			float: right;
+			width: 64%;
+		}
+
+		@extend %responsive-layout-max !optional;
+	}
+
+	%sc-sidebarprimary_layout {
+
+		// BASEUP
+		@include responsive-range(baseup) {
+			float: left;
+			width: 30%;
+		}
+		// BASEDOWN
+		@include responsive-range(basedown) {
+			float: left;
+			width: 35%;
+		}
+		// MEDDOWN
+		@include responsive-range(meddown) {
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		@extend %responsive-layout-max !optional;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	.sidebar-content .content-sidebar-wrap {
+		@extend %sc-csw_layout !optional;
+	}
+
+	.sidebar-content .content {
+		@extend %sc-content_layout !optional;
+	}
+
+	.sidebar-content .sidebar-primary {
+		@extend %sc-sidebarprimary_layout !optional;
+	}

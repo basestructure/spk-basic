@@ -1,0 +1,47 @@
+/* BASE_230 | LAYOUT | 230_MODEL-BASICSETUP | CS - 2017-02-13 */
+
+// -------------------------------------
+// EXTEND
+
+	%cs-csw_layout {
+		float: left;
+		width: 100%;
+	}
+
+	%cs-content_layout {
+		float: left;
+		width: 60%;
+
+		@include responsive-range(lrgdown) {
+			width: 65%;
+		}
+		@extend %responsive-layout-max !optional;
+	}
+
+	%cs-sidebarprimary_layout {
+		float: right;
+		width: 30%;
+
+		@include responsive-range(lrgdown) {
+			width: 30%;
+		}
+		@include responsive-range(meddown) {
+			width: 33%;
+		}
+		@extend %responsive-layout-max !optional;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	.content-sidebar .content-sidebar-wrap {
+		@extend %cs-csw_layout !optional;
+	}
+
+	.content-sidebar .content {
+		@extend %cs-content_layout !optional;
+	}
+
+	.content-sidebar .sidebar-primary {
+		@extend %cs-sidebarprimary_layout !optional;
+	}

@@ -1,0 +1,16 @@
+/* SETUP | LAYOUT | 250_SETUPBASIC | STRUCTURE - 2018-08-07 */
+
+// -------------------------------------
+// EXTEND
+
+	%sitecontainer_layout {
+		@extend %clearfix !optional;
+	}
+
+
+// -------------------------------------
+// SELECTORS
+
+	.site-container {
+		@extend %sitecontainer_layout !optional;
+	}

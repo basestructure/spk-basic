@@ -1,0 +1,143 @@
+/* BASE_230 | LAYOUT | 230_MODEL-BASICSETUP | MENUTOGGLE - 2017-02-13 */
+// BASE_230 | MENU | 230_BASE
+
+// -------------------------------------
+// EXTEND
+
+	%both-toggle {
+		display: none;				// hides the submenus
+		visibility: hidden;			// hides the submenus
+
+		@include responsive-range(medbelowdown) {
+			display: block;
+			visibility: visible;	// shows the submenus' content
+			overflow: hidden;
+
+									// defines the toggle buttons default color
+			color: $color-link;
+			background-color: #fff;
+
+									// overrides the parent button selector
+			border-width: 0;
+			border-radius: 0;
+			cursor: pointer;
+			text-transform: uppercase;
+			padding: 0;
+			margin: 0 auto;
+
+			//color: #fff;
+			//background-color: $color-link;
+
+			// also overrides the default set on a button selector
+			//padding: 0;
+			//border-width: 0;
+			//border-radius: 0;
+
+			//margin: 0 auto;
+			//text-align: center;
+
+			//display: block;
+			//overflow: hidden;
+			//visibility: visible;
+		}
+	}
+	%both-toggle-hoverfocus {
+									// defines the (menu & sub) toggle buttons hover color
+		color: #fff;
+		background-color: $color-link;
+		border-width: 0;			// not sure what this does
+	}
+
+	%menu-toggle {
+		@include responsive-range(medbelowdown) {
+			width: 100%;			// stretches button clickability to maximum width
+			position: relative;		// centers the button relative to it's parent
+			z-index: 1000;
+		}
+		//width: 100%;
+		//text-align: center;
+		//line-height: 1.4;
+		//padding: 0.5rem;
+	}
+	%menu-toggle-focus {}
+	%menu-toggle-hover {
+		@include responsive-range(medbelowdown) {
+									// defines & overrides the menu-toggle buttons hover color
+			color: #fff;
+			background-color: $color-link;
+			border-width: 0;		// not sure what this does
+		}
+	}
+
+	%menu-toggle-before {}
+	%menu-toggle-activatedbefore {}
+
+	%submenu-toggle {
+		@include responsive-range(medbelowdown) {
+									// pushes submenu toggle button to right
+			float: right;
+			position: absolute;
+			right: 0;
+			top: 0;
+			z-index: 100;
+		}
+	}
+	%submenu-toggle-focus {}
+	%submenu-toggle-hover {}
+
+	%submenu-toggle-before {}
+	%submenu-toggle-activatedbefore {}
+
+// -------------------------------------
+// SELECTORS
+
+	button.menu-toggle,
+	.menu-toggle {
+		@extend %both-toggle !optional;
+		@extend %menu-toggle !optional;
+	}
+	button.sub-menu-toggle,
+	.sub-menu-toggle {
+		@extend %both-toggle !optional;
+		@extend %submenu-toggle !optional;
+	}
+
+	button.menu-toggle:focus,
+	.menu-toggle:focus {
+		@extend %both-toggle-hoverfocus !optional;
+		@extend %menu-toggle-focus !optional;
+	}
+	button.menu-toggle:hover,
+	.menu-toggle:hover {
+		@extend %both-toggle-hoverfocus !optional;
+		@extend %menu-toggle-hover !optional;
+	}
+
+	button.menu-toggle:before,
+	.menu-toggle:before {
+		@extend %menu-toggle-before !optional;
+	}
+	button.menu-toggle.activated::before,
+	.menu-toggle.activated::before {
+		@extend %menu-toggle-activatedbefore !optional;
+	}
+
+	button.sub-menu-toggle:focus,
+	.sub-menu-toggle:focus {
+		@extend %both-toggle-hoverfocus !optional;
+		@extend %submenu-toggle-focus !optional;
+	}
+	button.sub-menu-toggle:hover,
+	.sub-menu-toggle:hover {
+		@extend %both-toggle-hoverfocus !optional;
+		@extend %submenu-toggle-hover !optional;
+	}
+
+	button.sub-menu-toggle::before,
+	.sub-menu-toggle::before {
+		@extend %submenu-toggle-before !optional;
+	}
+	button.sub-menu-toggle.activated::before,
+	.sub-menu-toggle.activated::before {
+		@extend %submenu-toggle-activatedbefore !optional;
+	}

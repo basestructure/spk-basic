@@ -1,0 +1,234 @@
+/* SETUP | LAYOUT | 250_SETUPBASIC | ENTRY - 2018-08-07 */
+
+// -------------------------------------
+// EXTEND
+
+	%entry_layout {}
+		%single-entry_layout {}
+		%page-entry_layout {}
+
+	// ENTRY-HEADER
+
+	%entryheader_layout {}
+		%single-entryheader_layout {
+			margin-bottom: 2rem;
+		}
+		%page-entryheader_layout {
+			margin-bottom: 2rem;
+		}
+
+	// ENTRY-CONTENT
+
+	%entrycontent_layout {}
+		%single-entrycontent_layout {}
+		%page-entrycontent_layout {}
+
+	// ENTRY-FOOTER
+
+	%entryfooter_layout {}
+		%single-entryfooter_layout {}
+		%page-entryfooter_layout {}
+
+	// ENTRY-TITLE
+
+	%entrytitle_layout {
+		font-family: $fontfamily-entrytitle;
+		font-weight: $fontweight-entrytitle;
+		line-height: 1.2;
+	}
+		%entrytitle-a_layout {}
+		%entrytitle-hvr_layout {}
+
+		%single-entrytitle_layout {}
+			%single-entrytitle-a_layout {}
+			%single-entrytitle-hvr_layout {}
+		%page-entrytitle_layout {}
+			%page-entrytitle-a_layout {}
+			%page-entrytitle-hvr_layout {}
+
+	// ENTRY-META
+
+	%entrymeta_layout {
+		font-family: $fontfamily-entrymeta;
+		font-size: #{$fontsize-xxsml}rem;	// 11px
+		font-weight: bold;
+		letter-spacing: 0.0125rem;
+		text-transform: uppercase;
+		color: $color-mid;
+	}
+		%entrymeta-a_layout {}
+		%entrymeta-hvr_layout {}
+
+		%single-entrymeta_layout {}
+			%single-entrymeta-a_layout {}
+			%single-entrymeta-hvr_layout {}
+
+		%page-entrymeta_layout {}
+			%page-entrymeta-a_layout {}
+			%page-entrymeta-hvr_layout {}
+
+// -------------------------------------
+// SELECTORS
+
+	// ENTRY
+
+	.entry {
+		@extend %entry !optional;
+		@extend %entry_layout !optional;
+	}
+		.single {
+			.entry {
+				@extend %single-entry !optional;
+				@extend %single-entry_layout !optional;
+			}
+		}
+		.page {
+			.entry {
+				@extend %page-entry !optional;
+				@extend %page-entry_layout !optional;
+			}
+		}
+
+	// ENTRY-HEADER
+
+	.entry-header {
+		@extend %entryheader !optional;
+		@extend %entryheader_layout !optional;
+	}
+		.single {
+			.entry-header {
+				@extend %single-entryheader !optional;
+				@extend %single-entryheader_layout !optional;
+			}
+		}
+		.page {
+			.entry-header {
+				@extend %page-entryheader !optional;
+				@extend %page-entryheader_layout !optional;
+			}
+		}
+
+	// ENTRY-CONTENT
+
+	.entry-content {
+		@extend %entrycontent !optional;
+		@extend %entrycontent_layout !optional;
+	}
+		.single {
+			.entry-content {
+				@extend %single-entrycontent !optional;
+				@extend %single-entrycontent_layout !optional;
+			}
+		}
+		.page {
+			.entry-content {
+				@extend %page-entrycontent !optional;
+				@extend %page-entrycontent_layout !optional;
+			}
+		}
+
+	// ENTRY-FOOTER
+
+	.entry-footer {
+		@extend %entryfooter !optional;
+		@extend %entryfooter_layout !optional;
+	}
+		.single {
+			.entry-footer {
+				@extend %single-entryfooter !optional;
+				@extend %single-entryfooter_layout !optional;
+			}
+		}
+		.page {
+			.entry-footer {
+				@extend %page-entryfooter !optional;
+				@extend %page-entryfooter_layout !optional;
+			}
+		}
+
+	// ENTRY-TITLE
+
+	.entry-title {
+		@extend %entrytitle !optional;
+		@extend %entrytitle_layout !optional;
+		a {
+			@extend %entrytitle-a !optional;
+			@extend %entrytitle-a_layout !optional;
+			&:hover {
+				@extend %entrytitle-hvr !optional;
+				@extend %entrytitle-hvr_layout !optional;
+			}
+		}
+	}
+		.single {
+			.entry-title {
+				@extend %single-entrytitle !optional;
+				@extend %single-entrytitle_layout !optional;
+				a {
+					@extend %single-entrytitle-a !optional;
+					@extend %single-entrytitle-a_layout !optional;
+					&:hover {
+						@extend %single-entrytitle-hvr !optional;
+						@extend %single-entrytitle-hvr_layout !optional;
+					}
+				}
+			}
+		}
+		.page {
+			.entry-title {
+				@extend %page-entrytitle !optional;
+				@extend %page-entrytitle_layout !optional;
+				a {
+					@extend %page-entrytitle-a !optional;
+					@extend %page-entrytitle-a_layout !optional;
+
+					&:hover {
+						@extend %page-entrytitle-hvr !optional;
+						@extend %page-entrytitle-hvr_layout !optional;
+					}
+				}
+			}
+		}
+
+	// ENTRY-META
+
+	.entry-meta {
+		@extend %entrymeta !optional;
+		@extend %entrymeta_layout !optional;
+		a {
+			@extend %entrymeta-a !optional;
+			@extend %entrymeta-a_layout !optional;
+			&:hover {
+				@extend %entrymeta-hvr !optional;
+				@extend %entrymeta-hvr_layout !optional;
+			}
+		}
+	}
+		.single {
+			.entry-meta {
+				@extend %single-entrymeta !optional;
+				@extend %single-entrymeta_layout !optional;
+				a {
+					@extend %single-entrymeta-a !optional;
+					@extend %single-entrymeta-a_layout !optional;
+					&:hover {
+						@extend %single-entrymeta-hvr !optional;
+						@extend %single-entrymeta-hvr_layout !optional;
+					}
+				}
+			}
+		}
+		.page {
+			.entry-meta {
+				@extend %page-entrymeta !optional;
+				@extend %page-entrymeta_layout !optional;
+				a {
+					@extend %page-entrymeta-a !optional;
+					@extend %page-entrymeta-a_layout !optional;
+					&:hover {
+						@extend %page-entrymeta-hvr !optional;
+						@extend %page-entrymeta-hvr_layout !optional;
+					}
+				}
+			}
+		}

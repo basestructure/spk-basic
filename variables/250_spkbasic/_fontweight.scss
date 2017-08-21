@@ -1,0 +1,41 @@
+/* SETUP | VARIABLES | 250_SETUPBASIC | FONTWEIGHT - 2018-08-17 */
+
+// -------------------------------------
+// VARIABLES
+
+// RELATIVE
+
+	$fontweight-thinnest:				100;
+	$fontweight-thinner:				100;
+	$fontweight-thin:					300;
+	$fontweight-normal:					400;
+	$fontweight-thick:					500;
+	$fontweight-thicker:				700;
+	$fontweight-thickest:				900;
+
+// DEFAULT
+
+	$fontweight-default:				400;
+
+// BODY
+
+	$fontweight-body:					400;
+
+// BLOCKQUOTE, CITE & CAPTION
+
+	$fontweight-blockquote:				300;
+	$fontweight-cite:					400;
+	$fontweight-caption:				400;
+
+// TITLES
+
+	$fontweight-titlepage:				null;
+	$fontweight-titlepost:				null;
+	$fontweight-titlewidget:			null;
+	$fontweight-titlearchive:			null;
+
+// USAGE
+
+	$fontweight-sitetitle:				700;
+	$fontweight-sitedescription:		300;
+	$fontweight-entrytitle:				300;

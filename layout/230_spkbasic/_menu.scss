@@ -1,0 +1,101 @@
+/* BASE_230 | LAYOUT | 230_SPKBASIC | MENU - 2017-08-08 */
+// BASE_230 | MENU | 230_BASE
+
+// -------------------------------------
+// EXTEND
+
+	// MENU
+	%menu_layout {
+		//line-height: 1.75;
+		//margin-left: 0;
+	}
+
+	// GENESIS-NAV-MENU
+	%menugnm_layout {
+		list-style-type: none;		// removes bullets from ul
+		margin-left: 0;				// removes left space from ul
+	}
+
+	// MENU-PRIMARY & MENU-SECONDARY
+	%menuboth_layout {
+		//margin-bottom: 0;
+
+		@include responsive-range(medbelowdown) {
+			//background-color: #f5f5f5;
+		}
+	}
+
+	// MENU-PRIMARY
+	%menumenuprimary_layout {
+		margin-bottom: 0;
+	}
+
+	// MENU-SECONDARY
+	%menumenusecondary_layout {}
+
+	// WIDGET MENU
+	%menu-widget_layout {}
+
+	// SIDEBAR MENU
+	%menu-sidebar_layout {}
+
+	// FOOTER-WIDGETS MENU
+	%menu-footerwidgets_layout {}
+
+	// GENESIS-NAV-MENU
+	%menugnm_layout {}
+
+	// PREFIX MENU
+	%menu-prefix_layout {}
+
+	// GENESIS-RESPONSIVE-MENU
+	%menuresponsivemenu_layout {
+		@include responsive-range(medbelowdown) {
+			display: none;			// hides responsive submenu
+			position: relative;		// sets environment for positioned toggle buttons
+		}
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	.menu {
+		@extend %menu !optional;
+		@extend %menu_layout !optional;
+	}
+
+	.genesis-nav-menu {
+		@extend %menugnm_layout !optional;
+	}
+
+	.menu-primary {
+		@extend %menumenuprimary !optional;
+		@extend %menuboth_layout !optional;
+		@extend %menumenuprimary_layout !optional;
+	}
+
+	.menu-secondary {
+		@extend %menumenusecondary !optional;
+		@extend %menuboth_layout !optional;
+		@extend %menumenusecondary_layout !optional;
+	}
+
+	.widget .menu {
+		@extend %menu-widget !optional;
+		@extend %menu-widget_layout !optional;
+	}
+
+	.sidebar .menu {
+		@extend %menu-sidebar !optional;
+		@extend %menu-sidebar_layout !optional;
+	}
+
+	.footer-widgets .menu {
+		@extend %menu-footerwidgets !optional;
+		@extend %menu-footerwidgets_layout !optional;
+	}
+
+	.genesis-responsive-menu {
+		@extend %menuresponsivemenu !optional;
+		@extend %menuresponsivemenu_layout !optional;
+	}

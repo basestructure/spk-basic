@@ -1,0 +1,108 @@
+/* SETUP | VARIABLES | 250_SETUPBASIC | FONTFAMILY - 2018-08-17 */
+
+// -------------------------------------
+// VARIABLES
+
+// RELATIVE
+
+	$fontfamily-compact:				null;
+	$fontfamily-narrow:					null;
+	$fontfamily-regular:				null;
+	$fontfamily-wide:					null;
+	$fontfamily-script:					null;
+
+// DEFAULT (HTML)
+
+	$fontfamily-default:				"Roboto",arial,sans-serif;
+
+// BODY
+
+	$fontfamily-body:					"Roboto",arial,sans-serif;
+
+// HEADLINE
+
+	$fontfamily-headline:				null;
+
+// PARAGRAPH
+
+	$fontfamily-paragraph:				null;
+
+// LIST
+
+	$fontfamily-list:					null;
+
+// BLOCKQUOTE
+
+	$fontfamily-blockquote:				null;
+
+// CITE
+
+	$fontfamily-caption:				null;
+
+// BREADCRUMB
+
+	$fontfamily-breadcrumb:				null;
+
+// META
+
+	$fontfamily-meta:					null;
+
+// TITLES
+
+	$fontfamily-titlepage:				null;
+	$fontfamily-titlepost:				null;
+	$fontfamily-titlewidget:			null;
+	$fontfamily-titlearchive:			null;
+
+// ENTRY
+
+	$fontfamily-entrytitle:				null;
+	$fontfamily-entrymeta:				null;
+
+	// SINGLE
+	$fontfamily-single-entrytitle:		null;
+	$fontfamily-single-entrymeta:		null;
+
+	// PAGE
+	$fontfamily-page-entrytitle:		null;
+	$fontfamily-page-entrymeta:			null;
+
+	// ARCHIVE
+	$fontfamily-archive-entrytitle:		null;
+	$fontfamily-archive-entrymeta:		null;
+
+	// BLOG
+	$fontfamily-blog-entrytitle:		null;
+	$fontfamily-blog-entrymeta:			null;
+
+// REPLY
+
+	$fontfamily-replytitle:				null;
+
+// WIDGET
+
+	$fontfamily-widgettitle:			null;
+
+// ARCHIVE
+
+	$fontfamily-archivetitle:			null;
+	$fontfamily-archivedescription:		null;
+
+// HEADER
+
+	$fontfamily-sitetitle:				null;
+	$fontfamily-sitedescription:		null;
+
+// COPYRIGHT
+
+	$fontfamily-copyright:				null;
+
+// MENU
+
+	$fontfamily-menu:					null;
+	$fontfamily-submenu:				null;
+	$fontfamily-menu-primary:			null;
+	$fontfamily-submenu-primary:		null;
+	$fontfamily-menu-secondary:			null;
+	$fontfamily-submenu-secondary:		null;
+	$fontfamily-menuitem:				null;

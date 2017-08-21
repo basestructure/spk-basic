@@ -1,0 +1,25 @@
+/* BASE_230 | LAYOUT | 230_MODEL-BASICSETUP | STRUCTURE - 2017-02-13 */
+// BASE_230 | STRUCTURE | 230_BASE
+
+// -------------------------------------
+// EXTEND
+
+	%sitecontainer_layout {
+		max-width: #{$width-base}rem;
+		margin-right: auto;
+		margin-left: auto;
+		@extend %clearfix !optional;
+
+		@include responsive-range(basedown) {
+			padding: 1rem;
+		}
+	}
+
+
+// -------------------------------------
+// SELECTORS
+
+	.site-container {
+		@extend %sitecontainer !optional;
+		@extend %sitecontainer_layout !optional;
+	}

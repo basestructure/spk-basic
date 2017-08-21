@@ -1,0 +1,239 @@
+/* BASE_230 | LAYOUT | 230_MODEL-BASICSETUP | MENUSUBMENU - 2017-04-25 */
+// BASE_230 | MENU | 230_BASE
+
+// -------------------------------------
+// EXTEND
+
+	// SUBMENU
+	%submenu {
+		list-style-type: none;		// removes bullets from ul
+		margin-left: 0;				// removes left space from ul
+		//margin-bottom: 0;
+		//margin-left: 0;
+	}
+	%submenu-submenu {}
+
+	// MENU-PRIMARY & MENU-SECONDARY
+	// determines the width of the submenu (needs to match %dropdown-menuprisec-submenu-menuitemwchildhvr-submenu)
+	%menuboth-submenu {
+		//background-color: #ebebeb;
+
+		@include responsive-range(medbelowdown) {
+			//clear: both;
+			//display: none;
+			//opacity: 1;
+			//position: static;
+			//width: 100%;
+			//margin-left: 0;
+			//background-color: #ebebeb;
+			//margin-bottom: 0.5rem;
+		}
+	}
+	%menuboth-submenu-a {
+		@include responsive-range(medbelowdown) {
+			//border-left: 0;
+			//position: relative;
+			//width: auto;
+			//display: block;
+		}
+	}
+	%menuboth-submenu-submenu {
+		//background-color: #e1e1e1;
+
+		@include responsive-range(medbelowdown) {
+			//margin-left: 0;
+			//background-color: #e1e1e1;
+		}
+	}
+	%menuboth-submenu-submenu-a {}
+	%menuboth-submenu-submenu-submenu {
+		//background-color: #d4d4d4;
+	}
+	%menuboth-submenu-submenu-submenu-a {}
+
+	// MENU-PRIMARY
+	%menuprimary-submenu {}
+	%menuprimary-submenu-a {}
+	%menuprimary-submenu-submenu {}
+	%menuprimary-submenu-submenu-a {}
+	%menuprimary-submenu-submenu-submenu {}
+	%menuprimary-submenu-submenu-submenu-a {}
+
+ 	// MENU-SECONDARY
+	%menusecondary-submenu {}
+	%menusecondary-submenu-a {}
+	%menusecondary-submenu-submenu {}
+	%menusecondary-submenu-submenu-a {}
+	%menusecondary-submenu-submenu-submenu {}
+	%menusecondary-submenu-submenu-submenu-a {}
+
+ 	// WIDGET
+	// defines the hierarchial structure of menus entered in the widget
+	%widget-submenu {
+		//margin-left: #{$fontsize-default}rem;
+	}
+	%widget-submenu-submenu {}
+
+	// SIDEBAR
+	%sidebar-submenu {}
+	%sidebar-submenu-submenu {}
+
+	// FOOTER-WIDGETS
+	%footerwidgets-submenu {}
+	%footerwidgets-submenu-submenu {}
+
+	// SUBMENU
+	%submenu {}
+	%submenu-submenu {}
+
+	// MENU-PRIMARY & MENU-SECONDARY
+	// determines the width of the submenu (needs to match %dropdown-menuprisec-submenu-menuitemwchildhvr-submenu)
+	%menuboth-submenu {}
+	%menuboth-submenu-a {}
+	%menuboth-submenu-submenu {}
+	%menuboth-submenu-submenu-a {}
+	%menuboth-submenu-submenu-submenu {}
+	%menuboth-submenu-submenu-submenu-a {}
+
+	// MENU-PRIMARY
+	%menuprimary-submenu {}
+	%menuprimary-submenu-a {}
+	%menuprimary-submenu-submenu {}
+	%menuprimary-submenu-submenu-a {}
+	%menuprimary-submenu-submenu-submenu {}
+	%menuprimary-submenu-submenu-submenu-a {}
+
+ 	// MENU-SECONDARY
+	%menusecondary-submenu {}
+	%menusecondary-submenu-a {}
+	%menusecondary-submenu-submenu {}
+	%menusecondary-submenu-submenu-a {}
+	%menusecondary-submenu-submenu-submenu {}
+	%menusecondary-submenu-submenu-submenu-a {}
+
+ 	// WIDGET
+	// defines the hierarchial structure of menus entered in the widget
+	%widget-submenu {}
+	%widget-submenu-submenu {}
+
+	// SIDEBAR
+	%sidebar-submenu {}
+	%sidebar-submenu-submenu {}
+
+	// NAV-HEADER
+	%navheader-submenu {}
+	%navheader-submenu-submenu {}
+
+	// FOOTER-WIDGETS
+	%footerwidgets-submenu {}
+	%footerwidgets-submenu-submenu {}
+
+	// GENESIS-NAV-MENU
+	%gnm-submenu {}
+	%gnm-submenu-submenu {}
+
+	// PREFIX
+	%prefix-submenu {}
+	%prefix-submenu-submenu {}
+
+// -------------------------------------
+// SELECTORS
+
+	.sub-menu {
+		@extend %submenu !optional;
+	}
+		.sub-menu .sub-menu {
+			@extend %submenu-submenu !optional;
+		}
+
+	.nav-header .sub-menu {
+		@extend %navheader-submenu !optional;
+	}
+		.nav-header .sub-menu .sub-menu {
+			@extend %navheader-submenu-submenu !optional;
+		}
+
+	.menu-primary .sub-menu {
+		@extend %menuboth-submenu !optional;
+		@extend %menuprimary-submenu !optional;
+	}
+	.menu-primary .sub-menu a {
+		@extend %menuboth-submenu-a !optional;
+		@extend %menuprimary-submenu-a !optional;
+	}
+		.menu-primary .sub-menu .sub-menu {
+			@extend %menuboth-submenu-submenu !optional;
+			@extend %menuprimary-submenu-submenu !optional;
+		}
+		.menu-primary .sub-menu .sub-menu a {
+			@extend %menuboth-submenu-submenu-a !optional;
+			@extend %menuprimary-submenu-submenu-a !optional;
+		}
+			.menu-primary .sub-menu .sub-menu .sub-menu {
+				@extend %menuboth-submenu-submenu-submenu !optional;
+				@extend %menuprimary-submenu-submenu-submenu !optional;
+			}
+			.menu-primary .sub-menu .sub-menu a {
+				@extend %menuboth-submenu-submenu-submenu-a !optional;
+				@extend %menuprimary-submenu-submenu-submenu-a !optional;
+			}
+
+	.menu-secondary .sub-menu {
+		@extend %menuboth-submenu !optional;
+		@extend %menusecondary-submenu !optional;
+	}
+	.menu-secondary .sub-menu a {
+		@extend %menuboth-submenu-a !optional;
+		@extend %menusecondary-submenu-a !optional;
+	}
+		.menu-secondary .sub-menu .sub-menu {
+			@extend %menuboth-submenu-submenu !optional;
+			@extend %menusecondary-submenu-submenu !optional;
+		}
+		.menu-secondary .sub-menu .sub-menu a {
+			@extend %menuboth-submenu-submenu-a !optional;
+			@extend %menusecondary-submenu-submenu-a !optional;
+		}
+			.menu-secondary .sub-menu .sub-menu .sub-menu {
+				@extend %menuboth-submenu-submenu-submenu !optional;
+				@extend %menusecondary-submenu-submenu-submenu !optional;
+			}
+			.menu-secondary .sub-menu .sub-menu .sub-menu a {
+				@extend %menuboth-submenu-submenu-submenu-a !optional;
+				@extend %menusecondary-submenu-submenu-submenu-a !optional;
+			}
+
+	.widget .sub-menu {
+		@extend %widget-submenu !optional;
+	}
+		.widget .sub-menu .sub-menu {
+			@extend %widget-submenu-submenu !optional;
+		}
+
+	.sidebar .sub-menu {
+		@extend %sidebar-submenu !optional;
+	}
+		.sidebar .sub-menu .sub-menu {
+			@extend %sidebar-submenu-submenu !optional;
+		}
+
+	.footer-widgets .sub-menu {
+		@extend %footerwidgets-submenu !optional;
+	}
+		.footer-widgets .sub-menu .sub-menu {
+			@extend %footerwidgets-submenu-submenu !optional;
+		}
+
+	.genesis-nav-menu .sub-menu {
+		@extend %gnm-submenu !optional;
+	}
+		.genesis-nav-menu .sub-menu .sub-menu {
+			@extend %gnm-submenu-submenu !optional;
+		}
+
+	.prefix .sub-menu {
+		@extend %prefix-submenu !optional;
+	}
+		.prefix .sub-menu .sub-menu {
+			@extend %prefix-submenu-submenu !optional;
+		}

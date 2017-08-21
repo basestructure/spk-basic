@@ -1,0 +1,156 @@
+/* BASE_230 | LAYOUT | 230_MODEL-BASICSETUP | FOOTER-OVERRIDE - 2017-06-23 */
+// BASE_230 | FOOTER | 230_BASE
+
+// -------------------------------------
+// EXTEND
+
+	// SITE-FOOTER
+
+	%footer_fullwidth {
+		max-width: none;
+		width: 100%;
+	}
+
+	%sitefooter_override {}
+	%sitefooterwrap_override {}
+	%sitefooterwraponly_override {}
+
+	%sitefooter_fullwidth {}
+	%sitefooterwrap_fullwidth {}
+	%sitefooterwraponly_fullwidth {}
+
+	// FOOTER-WIDGETS
+
+	%footerwidgets_override {}
+	%footerwidgetswrap_override {}
+	%footerwidgetswraponly_override {}
+
+	%footerwidgets_fullwidth {}
+	%footerwidgetswrap_fullwidth {}
+	%footerwidgetswraponly_fullwidth {}
+
+	%footerwidgets1_override {}
+	%footerwidgets2_override {}
+	%footerwidgets3_override {}
+
+	%footerwidgets1_fullwidth {}
+	%footerwidgets2_fullwidth {}
+	%footerwidgets3_fullwidth {}
+
+
+// -------------------------------------
+// SELECTORS
+
+	// SITE-FOOTER
+
+	body.fullwidth .site-footer {
+		@extend %footer_fullwidth !optional;
+		@extend %sitefooter_fullwidth !optional;
+
+		.wrap {
+			@extend %sitefooterwrap_fullwidth !optional;
+		}
+	}
+	body.fullwidth .site-footer > .wrap {
+		@extend %footer_fullwidth !optional;
+		@extend %sitefooterwraponly_fullwidth !optional;
+	}
+
+	body.fullwidth-footer .site-footer {
+		@extend %footer_fullwidth !optional;
+		@extend %sitefooter_fullwidth !optional;
+
+		.wrap {
+			@extend %sitefooterwrap_fullwidth !optional;
+		}
+	}
+	body.fullwidth-footer .site-footer > .wrap {
+		@extend %footer_fullwidth !optional;
+		@extend %sitefooterwraponly_fullwidth !optional;
+	}
+
+	.override .site-footer {
+		@extend %sitefooter_override !optional;
+
+		.wrap {
+			@extend %sitefooterwrap_override !optional;
+		}
+	}
+	.override .site-footer > .wrap {
+		@extend %sitefooterwraponly_override !optional;
+	}
+
+	// FOOTER-WIDGETS
+
+	body.fullwidth .footer-widgets {
+		@extend %footer_fullwidth !optional;
+		@extend %footerwidgets_fullwidth !optional;
+
+		.wrap {
+			@extend %footerwidgetswrap_fullwidth !optional;
+		}
+	}
+	body.fullwidth .footer-widgets > .wrap {
+		@extend %footer_fullwidth !optional;
+		@extend %footerwidgetswraponly_fullwidth !optional;
+	}
+
+	body.fullwidth-footerwidgets .footer-widgets {
+		@extend %footer_fullwidth !optional;
+		@extend %footerwidgets_fullwidth !optional;
+
+		.wrap {
+			@extend %footerwidgetswrap_fullwidth !optional;
+		}
+	}
+	body.fullwidth-footerwidgets .footer-widgets > .wrap {
+		@extend %footer_fullwidth !optional;
+		@extend %footerwidgetswraponly_fullwidth !optional;
+	}
+
+	.override .footer-widgets {
+		@extend %footerwidgets_override !optional;
+
+		.wrap {
+			@extend %footerwidgetswrap_override !optional;
+		}
+	}
+	.override .footer-widgets > .wrap {
+		@extend %footerwidgetswraponly_override !optional;
+	}
+
+	body.fullwidth .footer-widgets-1 {
+		@extend %footer_fullwidth !optional;
+		@extend %footerwidgets1_fullwidth !optional;
+	}
+	body.fullwidth .footer-widgets-2 {
+		@extend %footer_fullwidth !optional;
+		@extend %footerwidgets2_fullwidth !optional;
+	}
+	body.fullwidth .footer-widgets-3 {
+		@extend %footer_fullwidth !optional;
+		@extend %footerwidgets3_fullwidth !optional;
+	}
+
+	body.fullwidth-footerwidgets .footer-widgets-1 {
+		@extend %footer_fullwidth !optional;
+		@extend %footerwidgets1_fullwidth !optional;
+	}
+	body.fullwidth-footerwidgets .footer-widgets-2 {
+		@extend %footer_fullwidth !optional;
+		@extend %footerwidgets2_fullwidth !optional;
+	}
+	body.fullwidth-footerwidgets .footer-widgets-3 {
+		@extend %footer_fullwidth !optional;
+		@extend %footerwidgets3_fullwidth !optional;
+	}
+
+	.override .footer-widgets-1 {
+		@extend %footerwidgets1_override !optional;
+	}
+	.override .footer-widgets-2 {
+		@extend %footerwidgets2_override !optional;
+	}
+	.override .footer-widgets-3 {
+		@extend %footerwidgets3_override !optional;
+	}

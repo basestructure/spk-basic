@@ -1,0 +1,103 @@
+/* SETUP | LAYOUT | 250_SETUPBASIC | WIDTH - 2018-08-07 */
+
+// -------------------------------------
+// EXTEND
+
+	%maxwidth {
+		width: 100%;
+		max-width: none;
+	}
+
+	%midwidth {
+		width: 100%;
+		max-width: #{$width-base}rem;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	.fullwidth {
+		@extend %maxwidth !optional;
+	}
+
+	body.fullwidth .container,
+	body.fullwidth-container .site-container {
+		@extend %maxwidth !optional;
+	}
+
+	body.fullwidth-header .site-header,
+	body.fullwidth-header .site-header > .wrap {
+		@extend %maxwidth !optional;
+	}
+
+	body.fullwidth .site-inner,
+	body.fullwidth .content-sidebar-wrap,
+	body.fullwidth .content,
+	body.fullwidth .sidebar,
+	body.fullwidth-inner .site-inner,
+	body.fullwidth-inner .content-sidebar-wrap,
+	body.fullwidth-inner .content,
+	body.fullwidth-inner .sidebar {
+		@extend %maxwidth !optional;
+	}
+
+	body.fullwidth-footerwidgets .site-footer,
+	body.fullwidth-footerwidgets .site-footer > .wrap {
+		@extend %maxwidth !optional;
+	}
+
+	body.fullwidth-footer .site-footer,
+	body.fullwidth-footer .site-footer > .wrap {
+		@extend %maxwidth !optional;
+	}
+
+	.maxwidth {
+		@extend %maxwidth !optional;
+	}
+
+	body.maxwidth-container .site-container,
+	body.maxwidth-siteinner .site-inner,
+	body.maxwidth-csw .content-sidebar-wrap,
+	body.maxwidth-content .content,
+	body.maxwidth-sidebar .sidebar {
+		@extend %maxwidth !optional;
+	}
+
+	.midwidth {
+		@extend %midwidth !optional;
+	}
+
+	body.midwidth-container .site-container {
+		@extend %midwidth !optional;		
+	}
+
+	body.midwidth-inner .site-inner,
+	body.midwidth-inner.fullwidth-inner .site-inner {
+		@extend %midwidth !optional;
+	}
+
+	body.midwidth-csw .content-sidebar-wrap,
+	body.midwidth-csw.fullwidth-inner .content-sidebar-wrap {
+		@extend %midwidth !optional;
+	}
+
+	body.midwidth-content .content,
+	body.midwidth-content.fullwidth-inner .content {
+		@extend %midwidth !optional;
+	}
+
+	body.midwidth-content .sidebar,
+	body.midwidth-content.fullwidth-inner .sidebar {
+		@extend %midwidth !optional;
+	}
+
+	.midwidth-center,
+	body.midwidth-center .site-container,
+	body.midwidth-center .site-inner,
+	body.midwidth-center .content,
+	body.midwidth-center .sidebar,
+	body.midwidth-center .content-sidebar-wrap {
+		float: none;
+		margin-right: auto;
+		margin-left: auto;
+	}
