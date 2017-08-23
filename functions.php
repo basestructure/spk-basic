@@ -1,9 +1,9 @@
 <?php
 /**
- * SPK-BASIC
- * This file adds functions to the SPK-BASIC Theme.
+ * SPK-GUIDE
+ * This file adds functions to the SPK-GUIDE Theme.
  *
- * @package SPK-BASIC
+ * @package SPK-GUIDE
  * @author  Mark Corpuz
  * @license GPL-2.0+
  * @link    http://markcorpuz.com/
@@ -18,7 +18,7 @@ include_once( get_stylesheet_directory() . '/lib/theme-defaults.php' );
 // Set Localization (do not remove).
 add_action( 'after_setup_theme', 'setupbasic_localization_setup' );
 function setupbasic_localization_setup(){
-	load_child_theme_textdomain( 'base-starter', get_stylesheet_directory() . '/languages' );
+	load_child_theme_textdomain( 'spk-guide', get_stylesheet_directory() . '/languages' );
 }
 
 // Add the helper functions.
@@ -40,8 +40,8 @@ include_once( get_stylesheet_directory() . '/lib/woocommerce/woocommerce-output.
 include_once( get_stylesheet_directory() . '/lib/woocommerce/woocommerce-notice.php' );
 
 //* Child theme (do not remove)
-define( 'CHILD_THEME_NAME', 'SPK-BASIC' );
-define( 'CHILD_THEME_URL', 'http://model.basestructure.com/spkbasic' );
+define( 'CHILD_THEME_NAME', 'SPK-GUIDE' );
+define( 'CHILD_THEME_URL', 'http://layout.basestructure.com/spk-guide' );
 define( 'CHILD_THEME_VERSION', '2.5.0.1' );
 
 // Enqueue Scripts and Styles.
