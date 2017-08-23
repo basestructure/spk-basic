@@ -1,9 +1,9 @@
 <?php
 /**
- * SPK-BASIC
- * This file adds functions to the SPK-BASIC Theme.
+ * SPK-PACKAGES
+ * This file adds functions to the SPK-PACKAGES Theme.
  *
- * @package SPK-BASIC
+ * @package SPK-PACKAGES
  * @author  Mark Corpuz
  * @license GPL-2.0+
  * @link    http://markcorpuz.com/
@@ -40,8 +40,8 @@ include_once( get_stylesheet_directory() . '/lib/woocommerce/woocommerce-output.
 include_once( get_stylesheet_directory() . '/lib/woocommerce/woocommerce-notice.php' );
 
 //* Child theme (do not remove)
-define( 'CHILD_THEME_NAME', 'SPK-BASIC' );
-define( 'CHILD_THEME_URL', 'http://model.basestructure.com/spkbasic' );
+define( 'CHILD_THEME_NAME', 'SPK-PACKAGES' );
+define( 'CHILD_THEME_URL', 'http://layout.basestructure.com/spk-packages' );
 define( 'CHILD_THEME_VERSION', '2.5.0.1' );
 
 // Enqueue Scripts and Styles.
