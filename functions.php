@@ -41,7 +41,7 @@ include_once( get_stylesheet_directory() . '/lib/woocommerce/woocommerce-notice.
 
 //* Child theme (do not remove)
 define( 'CHILD_THEME_NAME', 'SPK-MAIN' );
-define( 'CHILD_THEME_URL', 'http://layout.basestructure.com/spkmain' );
+define( 'CHILD_THEME_URL', 'http://layout.basestructure.com/spk-main' );
 define( 'CHILD_THEME_VERSION', '2.5.0.1' );
 
 // Enqueue Scripts and Styles.
