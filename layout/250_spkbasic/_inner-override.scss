@@ -1,4 +1,4 @@
-/* SETUP | LAYOUT | 250_SETUPBASIC | INNER-OVERRIDE - 2018-08-07 */
+/* SETUP | LAYOUT | 250_SETUPBASIC | INNER-OVERRIDE - 2018-08-24 */
 
 // -------------------------------------
 // EXTEND
@@ -28,6 +28,9 @@
 	%fullwidth {
 		max-width: none;
 		width: 100%;		
+	}
+	%fullwidth-csw {
+		padding: 0;
 	}
 
 // -------------------------------------
@@ -72,6 +75,7 @@
 	}
 	body.fullwidth-csw .content-sidebar-wrap {
 		@extend %fullwidth !optional
+		@extend %fullwidth-csw !optional
 	}
 	body.fullwidth-content .content {
 		@extend %fullwidth !optional
