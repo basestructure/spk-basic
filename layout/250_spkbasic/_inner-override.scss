@@ -68,21 +68,21 @@
 
 	// FULLWIDTH
 	body.fullwidth .site-inner {
-		@extend %fullwidth !optional
+		@extend %fullwidth !optional;
 	}
 	body.fullwidth-siteinner .site-inner {
-		@extend %fullwidth !optional
+		@extend %fullwidth !optional;
 	}
 	body.fullwidth-csw .content-sidebar-wrap {
-		@extend %fullwidth !optional
-		@extend %fullwidth-csw !optional
+		@extend %fullwidth !optional;
+		@extend %fullwidth-csw !optional;
 	}
 	body.fullwidth-content .content {
-		@extend %fullwidth !optional
+		@extend %fullwidth !optional;
 	}
 	body.fullwidth-sidebarprimary .sidebar-primary {
-		@extend %fullwidth !optional
+		@extend %fullwidth !optional;
 	}
 	body.fullwidth-sidebarsecondary .sidebar-secondary {
-		@extend %fullwidth !optional
+		@extend %fullwidth !optional;
 	}
