@@ -1,0 +1,37 @@
+/* SETUP | LAYOUT | 250_SETUPBASIC | PANEL - 2017-08-24 */
+
+// -------------------------------------
+// EXTEND
+
+	// PANEL
+
+	%panel {}
+
+	// PANEL OUTER & INNER
+
+	%panel-outer {}
+	%panel-inner {
+		max-width: #{$width-inner}rem;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+// -------------------------------------
+// SELECTORS
+
+	// PANEL
+
+	.panel {
+		@extend %panel !optional;
+	}
+
+	// PANEL OUTER & INNER
+	.panel > .outer {
+		@extend %panel-outer !optional;
+	}
+	.panel > .outer > .inner {
+		@extend %panel-inner !optional;
+	}
+	.panel > .inner {
+		@extend %panel-inner !optional;
+	}
