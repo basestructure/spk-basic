@@ -61,6 +61,12 @@ function setupbasic_enqueue_scripts_styles() {
 
 }
 
+//* Remove the post info function
+remove_action( 'genesis_before_post_content', 'genesis_post_info' );
+
+//* Remove the post meta function
+remove_action( 'genesis_after_post_content', 'genesis_post_meta' );
+
 // Define our responsive menu settings.
 function setupbasic_responsive_menu_settings() {
 
