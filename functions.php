@@ -61,11 +61,15 @@ function setupbasic_enqueue_scripts_styles() {
 
 }
 
-//* Remove the post info function
-remove_action( 'genesis_before_post_content', 'genesis_post_info' );
+//* Customize the entry meta in the entry header (requires HTML5 theme support)
+add_filter( 'genesis_post_info', 'sp_post_info_filter' );
+function sp_post_info_filter($post_info) {
+	$post_info = '[post_date] [post_edit]';
+	return $post_info;
+}
 
-//* Remove the post meta function
-remove_action( 'genesis_after_post_content', 'genesis_post_meta' );
+//* Remove the entry meta in the entry footer (requires HTML5 theme support)
+remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
 
 // Define our responsive menu settings.
 function setupbasic_responsive_menu_settings() {
